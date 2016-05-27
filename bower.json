@@ -1,0 +1,27 @@
+{
+  "name": "ngTagNews",
+  "authors": [
+    "Vyachaslav Kuzharov <marhuz.61@gmail.com>"
+  ],
+  "description": "Test app",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "angular-messages": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "a0-angular-storage": "^0.0.15",
+    "angular-jwt": "^0.0.9",
+    "angular-bootstrap": "^1.3.3",
+    "angular-animate": "^1.5.5"
+  }
+}

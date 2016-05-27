@@ -1,0 +1,57 @@
+/* General Content styles such as links, body text, or headings */
+body {
+    font-size: 16px;
+    line-height: 27px;
+    font-family: 'Open Sans', sans-serif;
+    color: #202020;
+    background-color: #e9e4da;
+}
+a {
+    color: #e84423;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #ec5d40;
+}
+h1 {
+    font-size: 45px;
+    line-height: 60px;
+    font-weight: normal;
+    font-family: 'PT Serif', serif;
+}
+h2 {
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+h3 {
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+}
+hr {
+    border-top-color: #cbc8c2;
+}
+/* Font Awesome Icons */
+.fa {
+    font-size: 24px;
+}
+::selection {
+    background: #3a3a3a;
+    /* Safari */
+    color: #e9e4da;
+}
+::-moz-selection {
+    background: #3a3a3a;
+    /* Firefox */
+    color: #e9e4da;
+}
+
+
+
+
+
+
+
