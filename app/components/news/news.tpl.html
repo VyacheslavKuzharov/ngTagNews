@@ -1,7 +1,76 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-offset-2">
-            {{newsCtrl.message}}
+<div class="widewrapper main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 blog-main">
+
+                <div class="row">
+                    <div class="col-md-12 blogShort">
+                        <h5> News Title</h5>
+                        <img src="" alt="" class="pull-left img-responsive thumb margin10 img-thumbnail">
+                        <article>
+                            <p>News description</p>
+                        </article>
+                        <ul class="list-inline list-unstyled pull-left">
+                            <li>
+                                <span><i class="fa fa-calendar"></i>Date</span>
+                            </li>
+                            <li>
+                                <span><i class="fa fa-comment"></i></span>
+                                <span class="comments-total">news.comments_count</span>
+                                <span class="comments-word">news.comments_count | getEnding</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-news-one pull-right marginBottom10">Read</a>
+                    </div>
+                </div>
+
+                <div class="paging text-center">
+                    <uib-pagination ng-model="newsCtrl.CurrentPage"
+                                    total-items="newsCtrl.totalItems"
+                                    max-size="newsCtrl.maxSize"
+                                    ng-change="newsCtrl.pageChanged()"
+                                    boundary-link-numbers="true"
+                                    rotate="false"
+                                    class="pagination-sm">
+                    </uib-pagination>
+                </div>
+            </div>
+
+
+            <aside class="col-md-4 blog-aside">
+
+                <div class="aside-widget">
+                    <header>
+                        <h4>Top News</h4>
+                    </header>
+                    <article class="clearfix">
+                        <a href="#"><img src="", height="80", width="100"></a>
+                        <span class="published">
+                            main_news.date
+                            <span class="category cat-sports"><a href="#">main_news.tag[0]</a></span>
+                        </span>
+                        <h3><a href="#">main_news.title</a></h3>
+                    </article>
+                </div>
+
+                <div class="aside-widget">
+                    <header>
+                        <h4>Tags</h4>
+                    </header>
+                    <div class="body clearfix">
+                        <ul class="tags">
+                            <li><a href="#">OpenPGP</a></li>
+                            <li><a href="#">Django</a></li>
+                            <li><a href="#">Bitcoin</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">GNU/Linux</a></li>
+                            <li><a href="#">Git</a></li>
+                            <li><a href="#">Homebrew</a></li>
+                            <li><a href="#">Debian</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
         </div>
     </div>
 </div>
