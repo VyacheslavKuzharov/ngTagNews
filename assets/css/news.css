@@ -2,6 +2,10 @@
     margin-top: 5px;
     border-bottom:1px solid #ddd;
 }
+
+.blogShort p {
+    font-size: 14px;
+}
 .add{
     background: #333;
     padding: 10%;
@@ -178,3 +182,24 @@ fieldset[disabled] .btn-news-one.active {
 .btn-news-one .caret {
     border-top-color: #e9e4da;
 }
+
+/* --ngAnimation-- */
+.news-collection.ng-enter, .news-collection.ng-move{
+    transition: 0.4s all;
+    opacity: 0;
+}
+
+.news-collection.ng-enter.ng-enter-active, .news-collection.ng-move.ng-move-active{
+    opacity: 1;
+}
+
+.news-collection.ng-leave{
+    animation: 0.4s fade_news;
+}
+
+@keyframes fade_news {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
+
+/* --ngAnimation-- */

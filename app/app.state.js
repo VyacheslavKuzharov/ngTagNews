@@ -25,6 +25,12 @@ angular
                     templateUrl: 'app/components/news/news.tpl.html',
                     controller: 'newsController',
                     controllerAs: 'newsCtrl'
+                })
+                .state('paging', {
+                    url: '/news?page',
+                    templateUrl: 'app/components/news/news.tpl.html',
+                    controller: 'newsController',
+                    controllerAs: 'newsCtrl'
                 });
 
             // $httpProvider.interceptors.push('jwtInterceptor');

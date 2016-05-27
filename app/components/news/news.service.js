@@ -3,10 +3,25 @@
     angular.module('ngTagNews')
         .factory('newsService', newsService);
 
-    // newsService.$inject = [];
+    newsService.$inject = ['$http', 'CONFIG'];
     
-    function newsService() {
+    function newsService($http, CONFIG){
+        return {
+            getNews: getNews,
+            getTopNews: getTopNews
+        };
         
+        function getNews(page) {
+            return $http.get(CONFIG.APIHost + '/api/news', {
+                params:{
+                    page: page
+                }
+            })
+        }
+
+        function getTopNews() {
+            return $http.get(CONFIG.APIHost + '/api/news/top_news')
+        }
     }
     
 })();

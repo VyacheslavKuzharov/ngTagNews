@@ -1,0 +1,20 @@
+<div class="row news-collection" ng-repeat="article in news">
+    <div class="col-md-12 blogShort">
+        <ins><h4>{{ article.title }}</h4></ins>
+        <img ng-src="{{ article.small_image }}" width="70" height="70" class="pull-left img-responsive thumb margin10 img-thumbnail">
+        <article>
+            <p>{{ article.description }}</p>
+        </article>
+        <ul class="list-inline list-unstyled pull-left">
+            <li>
+                <span><i class="fa fa-calendar"></i>{{ article.date | date:"MMM d, y" }}</span>
+            </li>
+            <li>
+                <span><i class="fa fa-comment"></i></span>
+                <span class="comments-total"> 7 </span>
+                <span class="comments-word"> коментариев</span>
+            </li>
+        </ul>
+        <a href="#" class="btn btn-news-one pull-right marginBottom10">Read</a>
+    </div>
+</div>
