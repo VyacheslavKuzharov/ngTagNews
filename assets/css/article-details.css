@@ -1,0 +1,21 @@
+.blog-post {
+    margin-bottom: 45px;
+}
+.blog-post header h1 {
+    margin-bottom: 22px;
+}
+.blog-post header .lead-image {
+    position: relative;
+}
+
+.blog-post .body {
+    margin-top: 20px;
+}
+@media (min-width: 1200px) {
+    .blog-post .body {
+        padding-right: 30px;
+    }
+}
+.blog-post .body p {
+    margin-bottom: 20px;
+}

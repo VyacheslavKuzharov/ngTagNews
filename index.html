@@ -12,12 +12,18 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/news.css">
     <link rel="stylesheet" href="assets/css/tags-widget.css">
+    <link rel="stylesheet" href="assets/css/article-details.css">
 </head>
 <body>
 
     <toolbar></toolbar>
 
-    <ui-view></ui-view>
+    <div class="container">
+        <div class="page-content ">
+            <ui-view></ui-view>
+        </div>
+
+    </div>
 
     <footer></footer>
 
@@ -39,5 +45,6 @@
     <script src="app/components/news/news.service.js"></script>
     <script src="app/components/news/article/news-article.directive.js"></script>
     <script src="app/components/news/top-article/top-news-article.directive.js"></script>
+    <script src="app/components/news/article-details/article-details.controller.js"></script>
 </body>
 </html>

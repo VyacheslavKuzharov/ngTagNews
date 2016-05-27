@@ -31,6 +31,12 @@ angular
                     templateUrl: 'app/components/news/news.tpl.html',
                     controller: 'newsController',
                     controllerAs: 'newsCtrl'
+                })
+                .state('articleDetails', {
+                    url: '/news/:id',
+                    templateUrl: 'app/components/news/article-details/article-details.tpl.html',
+                    controller: 'articleDitailsController',
+                    controllerAs: 'detailsCtrl'
                 });
 
             // $httpProvider.interceptors.push('jwtInterceptor');

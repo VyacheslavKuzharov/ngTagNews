@@ -8,7 +8,8 @@
     function newsService($http, CONFIG){
         return {
             getNews: getNews,
-            getTopNews: getTopNews
+            getTopNews: getTopNews,
+            getArticleDetails: getArticleDetails 
         };
         
         function getNews(page) {
@@ -21,6 +22,10 @@
 
         function getTopNews() {
             return $http.get(CONFIG.APIHost + '/api/news/top_news')
+        }
+        
+        function getArticleDetails(id) {
+            return $http.get(CONFIG.APIHost + '/api/news/' + id)
         }
     }
     
