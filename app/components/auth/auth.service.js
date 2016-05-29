@@ -5,16 +5,17 @@
         .module('ngTagNews')
         .factory('authService', authService);
 
-    authService.$inject = ['$http', '$uibModal', 'store', '$document'];
+    authService.$inject = ['CONFIG', '$http', '$uibModal', 'store', '$document', 'jwtHelper'];
 
-    function authService($http, $uibModal, store, $document) {
+    function authService(CONFIG, $http, $uibModal, store, $document, jwtHelper) {
         return {
             login: login,
             logout: logout,
             register: register,
             isAuth: isAuth,
             openLoginDialog: openLoginDialog,
-            openRegisterDialog: openRegisterDialog
+            openRegisterDialog: openRegisterDialog,
+            currentUser: currentUser
         };
 
         function login(user_credentials) {
@@ -94,6 +95,18 @@
                 controllerAs: 'signUpCtrl'
             });
             $document.find('body').css('padding-right', '0px');
+        }
+        
+        function currentUser() {
+            var token = store.get('token');
+            
+            if(token){
+                return jwtHelper.decodeToken(token);
+            } else{
+                return false
+            }
+            
+            
         }
     }
 })();

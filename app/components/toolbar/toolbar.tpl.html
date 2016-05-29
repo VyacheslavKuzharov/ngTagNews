@@ -26,10 +26,17 @@
                             <!--</ul>-->
                         <!--</li>-->
                         <li>
-                            <a href="#" ng-click="toolbarCtrl.openlogin()">Login</a>
+                            <a href="#" ng-click="toolbarCtrl.openlogin()"
+                               ng-if="!toolbarCtrl.authService.isAuth()">
+                                Login
+                            </a>
                         </li>
                         <li>
-                            <a href="credits.html">Logout</a>
+                            <a href="#"
+                               ng-click="toolbarCtrl.logout()"
+                               ng-if="toolbarCtrl.authService.isAuth()">
+                                Logout
+                            </a>
                         </li>
                     </ul>
                 </div>

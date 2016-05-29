@@ -10,13 +10,27 @@
             controllerAs: 'toolbarCtrl'
         };
 
-        function toolbarController(authService) {
+        function toolbarController(authService, $location, store) {
             var vm = this;
             vm.openlogin = openlogin;
+            vm.logout = logout;
+            vm.authService = authService;
+            
 
 
             function openlogin() {
                 authService.openLoginDialog();
+            }
+
+            function logout() {
+                authService.logout().then(function (response) {
+                    console.log(response)
+                    
+                    if(response.status == 204){
+                        store.remove('token');
+                        $location.path('/');
+                    }
+                })
             }
         }
     }
