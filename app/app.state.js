@@ -12,12 +12,12 @@ angular
             $urlRouterProvider,
             jwtInterceptorProvider) {
 
-            // jwtInterceptorProvider.tokenGetter = function(store) {
-            //     return store.get('id_token');
-            // };
+            jwtInterceptorProvider.tokenGetter = function(store) {
+                return store.get('token');
+            };
 
 
-            // $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise('/');
 
             $stateProvider
                 .state('news', {
@@ -39,5 +39,5 @@ angular
                     controllerAs: 'detailsCtrl'
                 });
 
-            // $httpProvider.interceptors.push('jwtInterceptor');
+            $httpProvider.interceptors.push('jwtInterceptor');
         }]);

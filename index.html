@@ -13,19 +13,17 @@
     <link rel="stylesheet" href="assets/css/news.css">
     <link rel="stylesheet" href="assets/css/tags-widget.css">
     <link rel="stylesheet" href="assets/css/article-details.css">
+    <link rel="stylesheet" href="assets/css/login-card.css">
 </head>
 <body>
 
     <toolbar></toolbar>
 
     <div class="container">
-        <div class="page-content ">
-            <ui-view></ui-view>
-        </div>
-
+        <ui-view></ui-view>
     </div>
 
-    <footer></footer>
+    <news-footer></news-footer>
 
 
     <script src="bower_components/angular/angular.js"></script>
@@ -44,7 +42,11 @@
     <script src="app/components/news/news.controller.js"></script>
     <script src="app/components/news/news.service.js"></script>
     <script src="app/components/news/article/news-article.directive.js"></script>
-    <script src="app/components/news/top-article/top-news-article.directive.js"></script>
+    <script src="app/components/news/top-news-article/top-news-article.directive.js"></script>
     <script src="app/components/news/article-details/article-details.controller.js"></script>
+    <script src="app/components/footer/footer.directive.js"></script>
+    <script src="app/components/auth/auth.service.js"></script>
+    <script src="app/components/auth/sign-in/sign-in.controller.js"></script>
+    <script src="app/components/auth/sign-up/sign-up.controller.js"></script>
 </body>
 </html>

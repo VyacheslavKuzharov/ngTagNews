@@ -7,7 +7,7 @@
     
     function topNewsArticle() {
         return {
-            templateUrl: 'app/components/news/top-article/top-news-article.tpl.html',
+            templateUrl: 'app/components/news/top-news-article/top-news-article.tpl.html',
             scope: {
                 topNews: '='
             },
