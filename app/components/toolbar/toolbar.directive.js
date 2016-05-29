@@ -10,19 +10,13 @@
             controllerAs: 'toolbarCtrl'
         };
 
-        function toolbarController($uibModal) {
+        function toolbarController(authService) {
             var vm = this;
             vm.openlogin = openlogin;
 
 
             function openlogin() {
-                $uibModal.open({
-                    animation: true,
-                    templateUrl: 'app/components/auth/sign-in/sign-in.tpl.html',
-                    size: 'sm',
-                    controller: 'signInController',
-                    controllerAs: 'signInCtrl'
-                });
+                authService.openLoginDialog();
             }
         }
     }

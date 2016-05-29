@@ -5,9 +5,9 @@
         .module('ngTagNews')
         .factory('authService', authService);
 
-    authService.$inject = ['$http', '$uibModal', '$uibModalInstance', 'store'];
+    authService.$inject = ['$http', '$uibModal', 'store', '$document'];
 
-    function authService($http, $uibModal, $uibModalInstance, store) {
+    function authService($http, $uibModal, store, $document) {
         return {
             login: login,
             logout: logout,
@@ -73,7 +73,6 @@
         
 
         function openLoginDialog() {
-            $uibModalInstance.close();
 
             $uibModal.open({
                 animation: true,
@@ -82,12 +81,11 @@
                 controller: 'signInController',
                 controllerAs: 'signInCtrl'
             });
+            $document.find('body').css('padding-right', '0px');
         }
 
 
         function openRegisterDialog() {
-            $uibModalInstance.close();
-
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/components/auth/sign-up/sign-up.tpl.html',
@@ -95,6 +93,7 @@
                 controller: 'signUpController',
                 controllerAs: 'signUpCtrl'
             });
+            $document.find('body').css('padding-right', '0px');
         }
     }
 })();

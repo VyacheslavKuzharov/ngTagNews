@@ -5,22 +5,15 @@
         .module('ngTagNews')
         .controller('signUpController', signUpController);
 
-    signUpController.$inject = ['$uibModal', '$uibModalInstance'];
+    signUpController.$inject = ['$uibModalInstance', 'authService'];
     
-    function signUpController($uibModal, $uibModalInstance) {
+    function signUpController($uibModalInstance, authService) {
         var vm = this;
         vm.signInOpen = signInOpen;
         
         function signInOpen() {
-            $uibModalInstance.close()
-            
-            $uibModal.open({
-                animation: true,
-                templateUrl: 'app/components/auth/sign-in/sign-in.tpl.html',
-                size: 'sm',
-                controller: 'signInController',
-                controllerAs: 'signInCtrl'
-            });
+            $uibModalInstance.close();
+            authService.openLoginDialog();
         }
 
 
