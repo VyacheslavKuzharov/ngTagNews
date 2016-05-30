@@ -9,10 +9,13 @@
     function articleDitailsController($stateParams, $location, newsService) {
         var vm = this;
 
+       
+
 
         newsService.getArticleDetails($stateParams.id).then(function (response) {
-            console.log(response.data)
             vm.articleDetails = response.data
+            console.log(response.data)
+
         })
 
     }
