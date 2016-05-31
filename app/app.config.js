@@ -5,7 +5,8 @@ angular
         'ngAnimate',
         'angular-storage',
         'angular-jwt',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'ngTouch'
     ])
     .constant('CONFIG',
         {

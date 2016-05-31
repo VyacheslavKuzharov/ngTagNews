@@ -3,8 +3,19 @@
         <article class="blog-post">
             <header>
                 <h1>{{ detailsCtrl.articleDetails.title }}</h1>
-                <!--<div class="lead-image news-collection" ng-repeat="photo in detailsCtrl.articleDetails.photos">-->
-                    <!--<img ng-src="{{ photo }}" class="img-responsive">-->
+                <div class="lead-image news-collection" ng-repeat="photo in detailsCtrl.articleDetails.photos">
+                    <img ng-src="{{ photo.url }}" class="img-responsive">
+                </div>
+
+                <!--<div style="height: 305px">-->
+                    <!--<uib-carousel active="detailsCtrl.active" interval="detailsCtrl.myInterval" no-wrap="noWrapSlides">-->
+                        <!--<uib-slide ng-repeat="slide in detailsCtrl.articleDetails.photos track by slide.id" index="slide.id">-->
+                            <!--<img ng-src="{{slide.url}}" style="margin:auto;">-->
+                            <!--<div class="carousel-caption">-->
+                                <!--<h4>Slide {{slide.id}}</h4>-->
+                            <!--</div>-->
+                        <!--</uib-slide>-->
+                    <!--</uib-carousel>-->
                 <!--</div>-->
 
 
@@ -18,5 +29,7 @@
                 <li><a href="">tag.name</a></li>
             </ul>
         </div>
+
+       <comments></comments>
     </div>
 </div>

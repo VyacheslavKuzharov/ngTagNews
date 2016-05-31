@@ -9,13 +9,12 @@
     function articleDitailsController($stateParams, $location, newsService) {
         var vm = this;
 
-       
-
+        // vm.myInterval = 5000;
+        // vm.noWrapSlides = false;
+        // vm.active = 0;
 
         newsService.getArticleDetails($stateParams.id).then(function (response) {
-            vm.articleDetails = response.data
-            console.log(response.data)
-
+            vm.articleDetails = response.data;
         })
 
     }
