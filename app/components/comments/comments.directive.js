@@ -19,7 +19,7 @@
 
             commentsService.getArticleComments($stateParams.id).then(function (response) {
                 vm.comments = response.data
-            })
+            });
 
             function saveComment(comment) {
 
